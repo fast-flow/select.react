@@ -1,0 +1,161 @@
+/* Although the file suffix is CSS, but it will be less compilation */
+/* The CSS specification: https://github.com/fast-flow/trees */
+/* Base style */
+.r-select {
+    position: relative;
+    cursor: pointer;
+}
+.r-select-placeholder {
+    display: block;
+}
+.r-select-value {
+    display: none;
+}
+.r-select-switch {
+    position: absolute;
+    right:0;
+    top:0;
+}
+html .r-select--selected {
+    .r-select-value {
+        display: block;
+    }
+    .r-select-placeholder {
+        display: none;
+    }
+}
+.r-select-multiple {
+
+}
+
+/* Configurable style */
+html .r-select--simple {
+
+}
+html .r-select--simple{
+    padding-left: 10px;
+    padding-right: 20px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    &:hover {
+        border-color: #AAA;
+    }
+}
+html .r-select--simple .r-select-placeholder {
+    color:#999;
+}
+html .r-select--simple .r-select-placeholder,
+html .r-select--simple .r-select-value,
+html .r-select--simple .r-select-multiple {
+    height: 22px;
+    line-height: 22px;
+}
+html .r-select--simple .r-select-switch {
+    width:20px;
+    height: 26px;
+    display: block;
+    &:after {
+        content: ' ';
+        display: block;
+        border-color: #999999 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        width: 0;
+        margin-left: -4px;
+        margin-top: -2px;
+        position: absolute;
+        right:50%;
+        top:50%;
+    }
+}
+html .r-select-menu--simple {
+    border-radius: 5px;
+    border:1px solid #BBB;
+    box-shadow: 0px 0px 5px rgba(1,1,1,.2);
+}
+html .r-select-menu--simple .r-select-menu-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+html .r-select-menu--simple .r-select-menu-footer {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #e5e5e5;
+}
+html .r-select-menu--simple .r-select-menu-header,
+html .r-select-menu--simple .r-select-menu-footer {
+    position: relative;
+    padding: 8px 10px;
+    padding-right: 25px;
+    line-height: 16px;
+    background: #f5f5f5;
+    font-weight: bold;
+}
+html .r-select-menu--simple .r-select-menu-header-close,
+html .r-select-menu--simple .r-select-menu-footer-close {
+    position: absolute;
+    right:5px;top:0;
+    line-height: 32px;
+    width: 20px;
+    cursor: pointer;
+    text-align: center;
+    &:after {
+        content: '×';
+    }
+}
+// free
+html .r-select-menu--simple .r-select-menu-body {
+    overflow-y: auto;
+    height: 100px;
+}
+html .r-select-menu--simple .r-select-menu-list {
+    line-height: 26px;
+}
+html .r-select-menu--simple .r-select-menu-list-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover {
+        background-color: #3f5df3;
+        color:white;
+        cursor: pointer;
+    }
+}
+html .r-select-menu--simple .r-select-menu-list-item--selected {
+    background-color: #CCC;
+    color:white;
+}
+html .r-select--simple .r-select-multiple-item {
+    display: inline-block;
+    position: relative;
+    background-color: #EEE;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:#666;
+    margin-right: 3px;
+    &:hover {
+        padding-right: 20px;
+        .r-select-multiple-item-remove {
+            display: block;
+        }
+    }
+}
+html .r-select--simple .r-select-multiple-item-remove {
+    display: none;
+    position: absolute;
+    right:0;
+    top:0;
+    line-height: 22px;
+    width: 15px;
+    cursor: pointer;
+    &:hover {
+        color:#111;
+    }
+    &:after {
+        content: '×';
+    }
+}
