@@ -1,6 +1,7 @@
 {
   "name": "select.react",
   "version": "0.1.0",
+  "main": "lib/index.js",
   "description": "React,Select.Custom style!",
   "repository": "fast-flow/select.react",
   "homepage": "http://fast-flow.github.io/select.react",
@@ -14,8 +15,11 @@
     "React custom style"
   ],
   "dependencies": {
+    "add-dom-event-listener": "^1.0.2",
+    "body.react": "^0.1.1",
     "classnames": "^2.2.5",
     "rc-align": "2.2.0",
+    "rc-animate": "^2.3.1",
     "react": "0.14.8",
     "react-dom": "0.14.8"
   },

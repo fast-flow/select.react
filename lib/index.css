@@ -3,7 +3,6 @@
 /* Base style */
 .r-select {
     position: relative;
-    cursor: pointer;
 }
 .r-select-placeholder {
     display: block;
@@ -15,6 +14,7 @@
     position: absolute;
     right:0;
     top:0;
+    cursor: pointer;
 }
 html .r-select--selected {
     .r-select-value {
@@ -24,9 +24,13 @@ html .r-select--selected {
         display: none;
     }
 }
+.r-select-menu {
+    position: absolute;
+}
 .r-select-multiple {
 
 }
+
 
 /* Configurable style */
 html .r-select--simple {
@@ -107,7 +111,6 @@ html .r-select-menu--simple .r-select-menu-footer-close {
     right:5px;top:0;
     line-height: 32px;
     width: 20px;
-    cursor: pointer;
     text-align: center;
     &:after {
         content: '×';
@@ -116,7 +119,8 @@ html .r-select-menu--simple .r-select-menu-footer-close {
 // free
 html .r-select-menu--simple .r-select-menu-body {
     overflow-y: auto;
-    height: 100px;
+    background-color:white;
+    border-radius: 5px;
 }
 html .r-select-menu--simple .r-select-menu-list {
     line-height: 26px;
