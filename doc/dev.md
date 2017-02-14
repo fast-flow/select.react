@@ -15,13 +15,21 @@
 
 ````html
 <div class="r-select r-select--simple r-select--selected">
-    <div class="r-select">
-        <div class="r-select-placeholder">请选择</div>
-        <div class="r-select-value">
-            some
-        </div>
-        <span class="r-select-switch"></span>
+    <div class="r-select-placeholder">请选择</div>
+    <div class="r-select-value">
+        some
     </div>
+    <span class="r-select-switch"></span>
+</div>
+````
+
+````html
+<div class="r-select r-select--simple r-select--selected r-select--open">
+    <div class="r-select-placeholder">请选择</div>
+    <div class="r-select-value">
+        some
+    </div>
+    <span class="r-select-switch"></span>
 </div>
 ````
 

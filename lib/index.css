@@ -71,6 +71,12 @@ html .r-select--simple .r-select-switch {
         top:50%;
     }
 }
+html .r-select--simple.r-select--open .r-select-switch {
+    &:after {
+        border-color: transparent transparent #999 transparent;
+        border-width: 0px 4px 5px 4px;
+    }
+}
 html .r-select-menu--simple {
     border-radius: 5px;
     border:1px solid #BBB;
