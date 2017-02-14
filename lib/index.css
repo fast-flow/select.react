@@ -3,6 +3,7 @@
 /* Base style */
 .r-select {
     position: relative;
+    cursor: pointer;
 }
 .r-select-placeholder {
     display: block;
@@ -14,7 +15,6 @@
     position: absolute;
     right:0;
     top:0;
-    cursor: pointer;
 }
 html .r-select--selected {
     .r-select-value {
@@ -26,6 +26,8 @@ html .r-select--selected {
 }
 .r-select-menu {
     position: absolute;
+    // https://github.com/fast-flow/zindex.js
+    z-index: 1251;
 }
 .r-select-multiple {
 
@@ -60,6 +62,7 @@ html .r-select--simple .r-select-switch {
     width:20px;
     height: 26px;
     display: block;
+    text-align: center;
     &:after {
         content: ' ';
         display: block;
@@ -68,11 +71,28 @@ html .r-select--simple .r-select-switch {
         border-width: 5px 4px 0 4px;
         height: 0;
         width: 0;
-        margin-left: -4px;
+        margin-right: -4px;
         margin-top: -2px;
         position: absolute;
         right:50%;
         top:50%;
+    }
+}
+html .r-select--simple .r-select-clear {
+    position: absolute;
+    right:20px;
+    top:0;
+    line-height: 26px;
+    width:20px;
+    height: 26px;
+    text-align: center;
+    display: block;
+    color:#999;
+    &:after {
+        content: '×';
+    }
+    &:hover {
+        color:black;
     }
 }
 html .r-select--simple.r-select--open .r-select-switch {
@@ -85,6 +105,7 @@ html .r-select-menu--simple {
     border-radius: 5px;
     border:1px solid #BBB;
     box-shadow: 0px 0px 5px rgba(1,1,1,.2);
+    overflow: hidden;
 }
 html .r-select-menu--simple .r-select-menu-header {
     border-top-left-radius: 5px;
@@ -109,9 +130,12 @@ html .r-select-menu--simple .r-select-menu-header-close,
 html .r-select-menu--simple .r-select-menu-footer-close {
     position: absolute;
     right:5px;top:0;
-    line-height: 32px;
+    line-height: 30px;
     width: 20px;
     text-align: center;
+    &:hover {
+        cursor: pointer;
+    }
     &:after {
         content: '×';
     }
@@ -119,8 +143,8 @@ html .r-select-menu--simple .r-select-menu-footer-close {
 // free
 html .r-select-menu--simple .r-select-menu-body {
     overflow-y: auto;
+    height: 100px;
     background-color:white;
-    border-radius: 5px;
 }
 html .r-select-menu--simple .r-select-menu-list {
     line-height: 26px;
@@ -137,6 +161,14 @@ html .r-select-menu--simple .r-select-menu-list-item {
 html .r-select-menu--simple .r-select-menu-list-item--selected {
     background-color: #CCC;
     color:white;
+}
+html .r-select-menu--simple .r-select-menu-list-item--disabled {
+    background-color: #EEE;
+    color:white;
+    &:hover {
+        cursor: default;
+        background-color: #EEE;
+    }
 }
 html .r-select--simple .r-select-multiple-item {
     display: inline-block;

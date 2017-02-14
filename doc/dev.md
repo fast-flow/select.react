@@ -9,6 +9,7 @@
     <div class="r-select-value">
         some
     </div>
+    <span class="r-select-clear" ></span>
     <span class="r-select-switch"></span>
 </div>
 ````
@@ -19,6 +20,7 @@
     <div class="r-select-value">
         some
     </div>
+    <span class="r-select-clear" ></span>
     <span class="r-select-switch"></span>
 </div>
 ````
@@ -29,6 +31,7 @@
     <div class="r-select-value">
         some
     </div>
+    <span class="r-select-clear" ></span>
     <span class="r-select-switch"></span>
 </div>
 ````
@@ -69,6 +72,7 @@
     <div class="r-select-multiple">
         <span class="r-select-multiple-item">nimo<span class="r-select-multiple-item-remove"></span></span><span class="r-select-multiple-item">nico<span class="r-select-multiple-item-remove"></span></span>
     </div>
+    <span class="r-select-clear" ></span>
     <span class="r-select-switch"></span>
 </div>
 ````
