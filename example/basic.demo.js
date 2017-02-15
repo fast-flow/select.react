@@ -12,6 +12,10 @@ var App = React.createClass({
         var self = this
         return (
             <div>
+                empty:
+                 <Select >
+                 </Select>
+                 <hr />
                  <Select value={self.state.value} placeholder="请选择一项" onChange={function (value) {
                          console.log(value)
                          self.setState({

@@ -153,7 +153,7 @@ html .r-select-menu--simple .r-select-menu-footer-close {
 // free
 html .r-select-menu--simple .r-select-menu-body {
     overflow-y: auto;
-    height: 100px;
+    max-height: 100px;
     background-color:white;
 }
 html .r-select-menu--simple .r-select-menu-list {
@@ -167,6 +167,10 @@ html .r-select-menu--simple .r-select-menu-list-item {
         color:white;
         cursor: pointer;
     }
+}
+html .r-select-menu--simple .r-select-menu-list-empty {
+    color:#666;
+    text-align: center;
 }
 html .r-select-menu--simple .r-select-menu-list-item--selected {
     background-color: #CCC;
