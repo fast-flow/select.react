@@ -5,7 +5,7 @@ var App = React.createClass({
     getInitialState: function () {
         return {
             value: "a",
-            multipleValue: []
+            multipleValue: ["b", "c"]
         }
     },
     render: function () {
@@ -54,10 +54,10 @@ var App = React.createClass({
                          <Option value="d" >tim</Option>
                          <Option value="e" >jack</Option>
                          <Option value="f" >title</Option>
-                         <Option value="g" >tim</Option>
+                         <Option value="g" >ppk</Option>
                          <Option value="h" >hans</Option>
                          <Option value="i" >orly</Option>
-                         <Option value="j" >tim</Option>
+                         <Option value="j" >efil</Option>
                          <Option value="k" >etude</Option>
                          <Option value="l" >liza</Option>
                      </Select>
