@@ -1,0 +1,217 @@
+/* Although the file suffix is CSS, but it will be less compilation */
+/* The CSS specification: https://github.com/fast-flow/trees */
+/* Base style */
+.r-select {
+    position: relative;
+    cursor: pointer;
+}
+.r-select-selection-placeholder {
+    display: block;
+}
+.r-select-selection-value {
+    display: none;
+}
+.r-select-selection-switch {
+    position: absolute;
+    right:0;
+    top:0;
+    display: block;
+}
+.r-select-selection-clear {
+    display: none;
+}
+html .r-select--selected {
+    .r-select-selection-value {
+        display: block;
+    }
+    .r-select-selection-placeholder {
+        display: none;
+    }
+    .r-select-selection-clear {
+        display: block;
+    }
+}
+.r-select-menu {
+    position: absolute;
+    // https://github.com/fast-flow/zindex.js
+    z-index: 1251;
+}
+.r-select-selection-multiple {
+
+}
+html .r-select--multiple {
+    .r-select-selection-clear,
+    .r-select-selection-switch {
+        display: none;
+    }
+}
+/* Configurable style */
+html .r-select--simple {
+
+}
+html .r-select--simple .r-select-selection {
+    padding-left: 10px;
+    padding-right: 40px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    &:hover {
+        border-color: #AAA;
+    }
+}
+html .r-select--simple.r-select--multiple .r-select-selection {
+    padding-right: 10px;
+}
+html .r-select--simple .r-select-selection-placeholder {
+    color:#999;
+}
+html .r-select--simple .r-select-selection-placeholder,
+html .r-select--simple .r-select-selection-value,
+html .r-select--simple .r-select-selection-multiple {
+    min-height: 26px;
+    line-height: 26px;
+}
+html .r-select--simple .r-select-selection-switch {
+    width:20px;
+    height: 26px;
+    text-align: center;
+    &:after {
+        content: ' ';
+        display: block;
+        border-color: #999999 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        width: 0;
+        margin-right: -4px;
+        margin-top: -2px;
+        position: absolute;
+        right:50%;
+        top:50%;
+    }
+}
+html .r-select--simple .r-select-selection-clear {
+    position: absolute;
+    right:20px;
+    top:0;
+    line-height: 26px;
+    width:20px;
+    height: 26px;
+    text-align: center;
+    color:#999;
+    &:after {
+        content: '×';
+    }
+    &:hover {
+        color:black;
+    }
+}
+html .r-select--simple.r-select--open .r-select-selection-switch {
+    &:after {
+        border-color: transparent transparent #999 transparent;
+        border-width: 0px 4px 5px 4px;
+    }
+}
+html .r-select-menu--simple {
+    border-radius: 5px;
+    border:1px solid #BBB;
+    box-shadow: 0px 0px 5px rgba(1,1,1,.2);
+    overflow: hidden;
+}
+html .r-select-menu--simple .r-select-menu-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+html .r-select-menu--simple .r-select-menu-footer {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #e5e5e5;
+}
+html .r-select-menu--simple .r-select-menu-header,
+html .r-select-menu--simple .r-select-menu-footer {
+    position: relative;
+    padding: 8px 10px;
+    padding-right: 25px;
+    line-height: 16px;
+    background: #f5f5f5;
+    font-weight: bold;
+}
+html .r-select-menu--simple .r-select-menu-header-close,
+html .r-select-menu--simple .r-select-menu-footer-close {
+    position: absolute;
+    right:5px;top:0;
+    line-height: 30px;
+    width: 20px;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+    }
+    &:after {
+        content: '×';
+    }
+}
+// free
+html .r-select-menu--simple .r-select-menu-body {
+    overflow-y: auto;
+    max-height: 100px;
+    background-color:white;
+}
+html .r-select-menu--simple .r-select-menu-list {
+    line-height: 26px;
+}
+html .r-select-menu--simple .r-select-menu-list-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover {
+        background-color: #3f5df3;
+        color:white;
+        cursor: pointer;
+    }
+}
+html .r-select-menu--simple .r-select-menu-list-empty {
+    color:#666;
+    text-align: center;
+}
+html .r-select-menu--simple .r-select-menu-list-item--selected {
+    background-color: #CCC;
+    color:white;
+}
+html .r-select-menu--simple .r-select-menu-list-item--disabled {
+    background-color: #EEE;
+    color:white;
+    &:hover {
+        cursor: default;
+        background-color: #EEE;
+    }
+}
+html .r-select--simple .r-select-selection-multiple-item {
+    display: inline-block;
+    position: relative;
+    background-color: #EEE;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:#666;
+    margin:2px;
+    &:hover {
+        padding-right: 20px;
+        .r-select-selection-multiple-item-remove {
+            display: block;
+        }
+    }
+}
+html .r-select--simple .r-select-selection-multiple-item-remove {
+    display: none;
+    position: absolute;
+    right:0;
+    top:0;
+    line-height: 26px;
+    width: 15px;
+    cursor: pointer;
+    &:hover {
+        color:#111;
+    }
+    &:after {
+        content: '×';
+    }
+}
