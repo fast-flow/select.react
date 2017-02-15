@@ -5,23 +5,30 @@
     position: relative;
     cursor: pointer;
 }
-.r-select-placeholder {
+.r-select-selection-placeholder {
     display: block;
 }
-.r-select-value {
+.r-select-selection-value {
     display: none;
 }
-.r-select-switch {
+.r-select-selection-switch {
     position: absolute;
     right:0;
     top:0;
+    display: block;
+}
+.r-select-selection-clear {
+    display: none;
 }
 html .r-select--selected {
-    .r-select-value {
+    .r-select-selection-value {
         display: block;
     }
-    .r-select-placeholder {
+    .r-select-selection-placeholder {
         display: none;
+    }
+    .r-select-selection-clear {
+        display: block;
     }
 }
 .r-select-menu {
@@ -29,39 +36,43 @@ html .r-select--selected {
     // https://github.com/fast-flow/zindex.js
     z-index: 1251;
 }
-.r-select-multiple {
+.r-select-selection-multiple {
 
 }
-
-
+html .r-select--multiple {
+    .r-select-selection-clear,
+    .r-select-selection-switch {
+        display: none;
+    }
+}
 /* Configurable style */
 html .r-select--simple {
 
 }
-html .r-select--simple{
+html .r-select--simple .r-select-selection {
     padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 40px;
     border: 1px solid #DDD;
     border-radius: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
     &:hover {
         border-color: #AAA;
     }
 }
-html .r-select--simple .r-select-placeholder {
+html .r-select--simple.r-select--multiple .r-select-selection {
+    padding-right: 10px;
+}
+html .r-select--simple .r-select-selection-placeholder {
     color:#999;
 }
-html .r-select--simple .r-select-placeholder,
-html .r-select--simple .r-select-value,
-html .r-select--simple .r-select-multiple {
-    height: 22px;
-    line-height: 22px;
+html .r-select--simple .r-select-selection-placeholder,
+html .r-select--simple .r-select-selection-value,
+html .r-select--simple .r-select-selection-multiple {
+    min-height: 26px;
+    line-height: 26px;
 }
-html .r-select--simple .r-select-switch {
+html .r-select--simple .r-select-selection-switch {
     width:20px;
     height: 26px;
-    display: block;
     text-align: center;
     &:after {
         content: ' ';
@@ -78,7 +89,7 @@ html .r-select--simple .r-select-switch {
         top:50%;
     }
 }
-html .r-select--simple .r-select-clear {
+html .r-select--simple .r-select-selection-clear {
     position: absolute;
     right:20px;
     top:0;
@@ -86,7 +97,6 @@ html .r-select--simple .r-select-clear {
     width:20px;
     height: 26px;
     text-align: center;
-    display: block;
     color:#999;
     &:after {
         content: '×';
@@ -95,7 +105,7 @@ html .r-select--simple .r-select-clear {
         color:black;
     }
 }
-html .r-select--simple.r-select--open .r-select-switch {
+html .r-select--simple.r-select--open .r-select-selection-switch {
     &:after {
         border-color: transparent transparent #999 transparent;
         border-width: 0px 4px 5px 4px;
@@ -170,7 +180,7 @@ html .r-select-menu--simple .r-select-menu-list-item--disabled {
         background-color: #EEE;
     }
 }
-html .r-select--simple .r-select-multiple-item {
+html .r-select--simple .r-select-selection-multiple-item {
     display: inline-block;
     position: relative;
     background-color: #EEE;
@@ -178,20 +188,20 @@ html .r-select--simple .r-select-multiple-item {
     padding-left: 5px;
     padding-right: 5px;
     color:#666;
-    margin-right: 3px;
+    margin:2px;
     &:hover {
         padding-right: 20px;
-        .r-select-multiple-item-remove {
+        .r-select-selection-multiple-item-remove {
             display: block;
         }
     }
 }
-html .r-select--simple .r-select-multiple-item-remove {
+html .r-select--simple .r-select-selection-multiple-item-remove {
     display: none;
     position: absolute;
     right:0;
     top:0;
-    line-height: 22px;
+    line-height: 26px;
     width: 15px;
     cursor: pointer;
     &:hover {

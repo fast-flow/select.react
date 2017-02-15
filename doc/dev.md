@@ -5,34 +5,40 @@
 
 ````html
 <div class="r-select r-select--simple">
-    <div class="r-select-placeholder">请选择</div>
-    <div class="r-select-value">
-        some
+    <div class="r-select-selection">
+        <div class="r-select-selection-placeholder">请选择</div>
+        <div class="r-select-selection-value">
+            some
+        </div>
+        <span class="r-select-selection-clear" ></span>
+        <span class="r-select-selection-switch"></span>
     </div>
-    <span class="r-select-clear" ></span>
-    <span class="r-select-switch"></span>
 </div>
 ````
 
 ````html
 <div class="r-select r-select--simple r-select--selected">
-    <div class="r-select-placeholder">请选择</div>
-    <div class="r-select-value">
-        some
+    <div class="r-select-selection">
+        <div class="r-select-selection-placeholder">请选择</div>
+        <div class="r-select-selection-value">
+            some
+        </div>
+        <span class="r-select-selection-clear" ></span>
+        <span class="r-select-selection-switch"></span>
     </div>
-    <span class="r-select-clear" ></span>
-    <span class="r-select-switch"></span>
 </div>
 ````
 
 ````html
 <div class="r-select r-select--simple r-select--selected r-select--open">
-    <div class="r-select-placeholder">请选择</div>
-    <div class="r-select-value">
-        some
+    <div class="r-select-selection">
+        <div class="r-select-selection-placeholder">请选择</div>
+        <div class="r-select-selection-value">
+            some
+        </div>
+        <span class="r-select-selection-clear" ></span>
+        <span class="r-select-selection-switch"></span>
     </div>
-    <span class="r-select-clear" ></span>
-    <span class="r-select-switch"></span>
 </div>
 ````
 
@@ -68,11 +74,26 @@
 
 ````html
 <div class="r-select r-select--simple r-select--selected r-select--multiple">
-    <div class="r-select-placeholder">请选择</div>
-    <div class="r-select-multiple">
-        <span class="r-select-multiple-item">nimo<span class="r-select-multiple-item-remove"></span></span><span class="r-select-multiple-item">nico<span class="r-select-multiple-item-remove"></span></span>
+    <div class="r-select-selection">
+        <div class="r-select-selection-placeholder">请选择</div>
+        <div class="r-select-selection-multiple">
+            <span class="r-select-selection-multiple-item">nimo<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nico<span class="r-select-selection-multiple-item-remove">
+        </div>
+        <span class="r-select-selection-clear" ></span>
+        <span class="r-select-selection-switch"></span>
     </div>
-    <span class="r-select-clear" ></span>
-    <span class="r-select-switch"></span>
+</div>
+````
+
+````html
+<div class="r-select r-select--simple r-select--selected r-select--multiple">
+    <div class="r-select-selection">
+        <div class="r-select-selection-placeholder">请选择</div>
+        <div class="r-select-selection-multiple">
+            <span class="r-select-selection-multiple-item">nimo<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nico<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nimo<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nico<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nimo<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nico<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nimo<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nico<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nimo<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nico<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nimo<span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item">nico<span class="r-select-selection-multiple-item-remove"></span></span>
+        </div>
+        <span class="r-select-selection-clear" ></span>
+        <span class="r-select-selection-switch"></span>
+    </div>
 </div>
 ````

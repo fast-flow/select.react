@@ -6,7 +6,7 @@
 
 ## todo
 
-1. [ ] 修改为 `.r-select-selection` `.r-select-menu` 结构，以此适应 3
+1. [x] 修改 `.r-select-selection` `.r-select-menu` 结构
 2. [ ] clear
 3. [ ] menu 不插入到body 而是插入到 select 内容，这样可以控制样式
 4. [ ] empty & searchEmpty
