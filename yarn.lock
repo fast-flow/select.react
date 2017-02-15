@@ -4589,3 +4589,7 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
+zindex.js:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/zindex.js/download/zindex.js-0.1.0.tgz#5436a430e876a1ee02482c91087baee48d7d465c"
+

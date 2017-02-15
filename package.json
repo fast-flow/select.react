@@ -21,7 +21,8 @@
     "rc-align": "2.2.0",
     "rc-animate": "^2.3.1",
     "react": "0.14.8",
-    "react-dom": "0.14.8"
+    "react-dom": "0.14.8",
+    "zindex.js": "^0.1.0"
   },
   "scripts": {
     "doc": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",

@@ -5,7 +5,7 @@ var App = React.createClass({
     getInitialState: function () {
         return {
             value: "a",
-            multipleValue: ["b", "c"]
+            multipleValue: ["b", "c", "d"]
         }
     },
     render: function () {
@@ -22,10 +22,10 @@ var App = React.createClass({
                              value: value
                          })
                      }}
-                      >
+                 >
                      <Option value="">请选择</Option>
                      <Option value="a" >nimo</Option>
-                     <Option value="b" >nico</Option>
+                     <Option value="b" view="NICO" >nico</Option>
                      <Option value="c" >judy</Option>
                      <Option value="d" className="myOption" >tim</Option>
                      <Option value="4194291487128419429" disabled className="titleOption" >title</Option>
@@ -48,11 +48,11 @@ var App = React.createClass({
                                  <span className="r-select-menu-header-close" data-r-select-close="true" ></span>
                              </div>
                          )}
-                          >
+                      >
                          <Option value="a" >nimo</Option>
                          <Option value="b" >nico</Option>
-                         <Option value="c" >judy</Option>
-                         <Option value="d" >tim</Option>
+                         <Option value="c" view="JUDY" >judy</Option>
+                         <Option value="d" view={(<em>Tim</em>)} >tim</Option>
                          <Option value="e" >jack</Option>
                          <Option value="f" >title</Option>
                          <Option value="g" >ppk</Option>
