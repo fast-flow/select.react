@@ -23,11 +23,12 @@ var App = React.createClass({
                          })
                      }}
                       >
-                     <Option value="" >请选择</Option>
+                     <Option value="">请选择</Option>
                      <Option value="a" >nimo</Option>
                      <Option value="b" >nico</Option>
                      <Option value="c" >judy</Option>
-                     <Option value="d" >tim</Option>
+                     <Option value="d" className="myOption" >tim</Option>
+                     <Option value="4194291487128419429" disabled className="titleOption" >title</Option>
                      <Option value="g" >tim</Option>
                      <Option value="h" >hans</Option>
                      <Option value="i" >orly</Option>
