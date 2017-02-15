@@ -7,7 +7,7 @@
 ## todo
 
 1. [x] 修改 `.r-select-selection` `.r-select-menu` 结构
-2. [ ] clear
+2. [x] clear
 3. [ ] menu 不插入到body 而是插入到 select 内容，这样可以控制样式
 4. [ ] empty & searchEmpty
 5. [ ] previewRender 控制预览区的显示

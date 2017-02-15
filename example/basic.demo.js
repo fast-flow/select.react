@@ -13,6 +13,7 @@ var App = React.createClass({
         return (
             <div>
                  <Select value={self.state.value} placeholder="请选择一项" onChange={function (value) {
+                         console.log(value)
                          self.setState({
                              value: value
                          })
@@ -31,7 +32,7 @@ var App = React.createClass({
                      <Option value="l" >liza</Option>
                  </Select>
                  <hr />
-                     <Select value={self.state.value} multiple onChange={function (value) {
+                     <Select value={self.state.multipleValue} multiple onChange={function (value) {
                              self.setState({
                                  multipleValue: value
                              })
