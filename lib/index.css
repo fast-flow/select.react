@@ -47,7 +47,7 @@ html .r-select--multiple {
 }
 /* Configurable style */
 html .r-select--simple {
-
+    background-color: white;
 }
 html .r-select--simple .r-select-selection {
     padding-left: 10px;
@@ -116,6 +116,7 @@ html .r-select-menu--simple {
     border:1px solid #BBB;
     box-shadow: 0px 0px 5px rgba(1,1,1,.2);
     overflow: hidden;
+    background-color: white;
 }
 html .r-select-menu--simple .r-select-menu-header {
     border-top-left-radius: 5px;
