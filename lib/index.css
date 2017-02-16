@@ -55,6 +55,8 @@ html .r-select--simple .r-select-selection {
     border: 1px solid #DDD;
     border-radius: 5px;
     background-color:white;
+    min-height: 26px;
+    line-height: 26px;
     &:hover {
         border-color: #AAA;
     }
@@ -64,12 +66,6 @@ html .r-select--simple.r-select--multiple .r-select-selection {
 }
 html .r-select--simple .r-select-selection-placeholder {
     color:#999;
-}
-html .r-select--simple .r-select-selection-placeholder,
-html .r-select--simple .r-select-selection-value,
-html .r-select--simple .r-select-selection-multiple {
-    min-height: 26px;
-    line-height: 26px;
 }
 html .r-select--simple .r-select-selection-switch {
     width:20px;
