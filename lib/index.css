@@ -47,13 +47,14 @@ html .r-select--multiple {
 }
 /* Configurable style */
 html .r-select--simple {
-    background-color: white;
+
 }
 html .r-select--simple .r-select-selection {
     padding-left: 10px;
     padding-right: 40px;
     border: 1px solid #DDD;
     border-radius: 5px;
+    background-color:white;
     &:hover {
         border-color: #AAA;
     }
@@ -154,7 +155,7 @@ html .r-select-menu--simple .r-select-menu-footer-close {
 // free
 html .r-select-menu--simple .r-select-menu-body {
     overflow-y: auto;
-    max-height: 100px;
+    max-height: 200px;
     background-color:white;
 }
 html .r-select-menu--simple .r-select-menu-list {
