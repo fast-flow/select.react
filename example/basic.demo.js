@@ -13,7 +13,13 @@ var App = React.createClass({
         return (
             <div>
                 empty:
-                 <Select menuStyle={{width: 100}} >
+                 <Select
+                     menuStyle={{width: 100}}
+                     arrows={(
+                         <div className="r-select-menu-arrows" >{/* r-select-menu-arrows--center */}</div>
+                     )}
+                     empty={(<em>无数据</em>)}
+                      >
                  </Select>
                  <hr />
                  <Select value={self.state.value} placeholder="请选择一项" onChange={function (value) {
