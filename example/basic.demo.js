@@ -22,6 +22,35 @@ var App = React.createClass({
                       >
                  </Select>
                  <hr />
+                 <Select  placeholder="请选择" value={self.state.multipleValue} multiple onChange={function (value) {
+                         self.setState({
+                             multipleValue: value
+                         })
+                     }}
+                     header={(
+                         <div>
+                             <span>选择多项</span>
+                             <span className="r-select-menu-header-close" data-r-select-close="true" ></span>
+                         </div>
+                     )}
+                  >
+                     <Option value="a" >nimo</Option>
+                     <Option value="b" >nico</Option>
+                     <Option value="c" view="JUDY" >judy</Option>
+                     <Option value="d" view={(<em>Tim</em>)} >tim</Option>
+                     <Option value="e" >jack</Option>
+                     <Option value="f" >title</Option>
+                     <Option value="g" >ppk</Option>
+                     <Option value="h" >hans</Option>
+                     <Option value="i" >orly</Option>
+                     <Option value="j" >efil</Option>
+                     <Option value="k" >etude</Option>
+                     <Option value="l" >liza</Option>
+                 </Select>
+                 <hr />
+                 <Select placeholder="请选择" value={[]} multiple onChange={function () {}} >
+                 </Select>
+                 <hr />
                  <Select value={self.state.value} placeholder="请选择一项" onChange={function (value) {
                          self.setState({
                              value: value
@@ -41,32 +70,6 @@ var App = React.createClass({
                      <Option value="k" >etude</Option>
                      <Option value="l" >liza</Option>
                  </Select>
-                 <hr />
-                     <Select value={self.state.multipleValue} multiple onChange={function (value) {
-                             self.setState({
-                                 multipleValue: value
-                             })
-                         }}
-                         header={(
-                             <div>
-                                 <span>选择多项</span>
-                                 <span className="r-select-menu-header-close" data-r-select-close="true" ></span>
-                             </div>
-                         )}
-                      >
-                         <Option value="a" >nimo</Option>
-                         <Option value="b" >nico</Option>
-                         <Option value="c" view="JUDY" >judy</Option>
-                         <Option value="d" view={(<em>Tim</em>)} >tim</Option>
-                         <Option value="e" >jack</Option>
-                         <Option value="f" >title</Option>
-                         <Option value="g" >ppk</Option>
-                         <Option value="h" >hans</Option>
-                         <Option value="i" >orly</Option>
-                         <Option value="j" >efil</Option>
-                         <Option value="k" >etude</Option>
-                         <Option value="l" >liza</Option>
-                     </Select>
              </div>
         )
     }
