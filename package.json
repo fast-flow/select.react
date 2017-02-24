@@ -1,6 +1,6 @@
 {
   "name": "select.react",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "lib/index.js",
   "description": "React,Select.Custom style!",
   "repository": "fast-flow/select.react",

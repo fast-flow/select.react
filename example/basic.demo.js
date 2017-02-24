@@ -69,6 +69,8 @@ var App = React.createClass({
                      <Option value="j" >tim</Option>
                      <Option value="k" >etude</Option>
                      <Option value="l" >liza</Option>
+                     <Option value={0} >0</Option>
+                     <Option value={"0"} >"0"</Option>
                  </Select>
              </div>
         )
