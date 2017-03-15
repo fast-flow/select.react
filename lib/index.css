@@ -46,10 +46,10 @@ html .r-select--multiple {
     }
 }
 /* Configurable style */
-html .r-select--simple {
+html .r-select--themes-simple {
 
 }
-html .r-select--simple .r-select-selection {
+html .r-select--themes-simple .r-select-selection {
     padding-left: 10px;
     padding-right: 40px;
     border: 1px solid #DDD;
@@ -61,13 +61,13 @@ html .r-select--simple .r-select-selection {
         border-color: #AAA;
     }
 }
-html .r-select--simple.r-select--multiple .r-select-selection {
+html .r-select--themes-simple.r-select--multiple .r-select-selection {
     padding-right: 10px;
 }
-html .r-select--simple .r-select-selection-placeholder {
+html .r-select--themes-simple .r-select-selection-placeholder {
     color:#999;
 }
-html .r-select--simple .r-select-selection-switch {
+html .r-select--themes-simple .r-select-selection-switch {
     width:20px;
     height: 26px;
     text-align: center;
@@ -86,7 +86,7 @@ html .r-select--simple .r-select-selection-switch {
         top:50%;
     }
 }
-html .r-select--simple .r-select-selection-clear {
+html .r-select--themes-simple .r-select-selection-clear {
     position: absolute;
     right:20px;
     top:0;
@@ -100,30 +100,30 @@ html .r-select--simple .r-select-selection-clear {
         color:black;
     }
 }
-html .r-select--simple.r-select--open .r-select-selection-switch {
+html .r-select--themes-simple.r-select--open .r-select-selection-switch {
     &:after {
         border-color: transparent transparent #999 transparent;
         border-width: 0px 4px 5px 4px;
     }
 }
-html .r-select-menu--simple {
+html .r-select-menu--themes-simple {
     border-radius: 5px;
     border:1px solid #BBB;
     box-shadow: 0px 0px 5px rgba(1,1,1,.2);
     background-color: white;
 }
-html .r-select-menu--simple .r-select-menu-header {
+html .r-select-menu--themes-simple .r-select-menu-header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom: 1px solid #e5e5e5;
 }
-html .r-select-menu--simple .r-select-menu-footer {
+html .r-select-menu--themes-simple .r-select-menu-footer {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top: 1px solid #e5e5e5;
 }
-html .r-select-menu--simple .r-select-menu-header,
-html .r-select-menu--simple .r-select-menu-footer {
+html .r-select-menu--themes-simple .r-select-menu-header,
+html .r-select-menu--themes-simple .r-select-menu-footer {
     position: relative;
     padding: 8px 10px;
     padding-right: 25px;
@@ -131,8 +131,8 @@ html .r-select-menu--simple .r-select-menu-footer {
     background: #f5f5f5;
     font-weight: bold;
 }
-html .r-select-menu--simple .r-select-menu-header-close,
-html .r-select-menu--simple .r-select-menu-footer-close {
+html .r-select-menu--themes-simple .r-select-menu-header-close,
+html .r-select-menu--themes-simple .r-select-menu-footer-close {
     position: absolute;
     right:5px;top:0;
     line-height: 30px;
@@ -145,16 +145,16 @@ html .r-select-menu--simple .r-select-menu-footer-close {
         content: '×';
     }
 }
-html .r-select-menu--simple .r-select-menu-body {
+html .r-select-menu--themes-simple .r-select-menu-body {
     overflow-y: auto;
     border-radius: 5px;
     max-height: 200px;
     background-color:white;
 }
-html .r-select-menu--simple .r-select-menu-list {
+html .r-select-menu--themes-simple .r-select-menu-list {
     line-height: 26px;
 }
-html .r-select-menu--simple .r-select-menu-list-item {
+html .r-select-menu--themes-simple .r-select-menu-list-item {
     padding-left: 10px;
     padding-right: 10px;
     &:hover {
@@ -163,15 +163,15 @@ html .r-select-menu--simple .r-select-menu-list-item {
         cursor: pointer;
     }
 }
-html .r-select-menu--simple .r-select-menu-list-empty {
+html .r-select-menu--themes-simple .r-select-menu-list-empty {
     color:#666;
     text-align: center;
 }
-html .r-select-menu--simple .r-select-menu-list-item--selected {
+html .r-select-menu--themes-simple .r-select-menu-list-item--selected {
     background-color: #CCC;
     color:white;
 }
-html .r-select-menu--simple .r-select-menu-list-item--disabled {
+html .r-select-menu--themes-simple .r-select-menu-list-item--disabled {
     background-color: #EEE;
     color:white;
     &:hover {
@@ -179,7 +179,7 @@ html .r-select-menu--simple .r-select-menu-list-item--disabled {
         background-color: #EEE;
     }
 }
-html .r-select--simple .r-select-selection-multiple-item {
+html .r-select--themes-simple .r-select-selection-multiple-item {
     display: inline-block;
     position: relative;
     background-color: #EEE;
@@ -197,7 +197,7 @@ html .r-select--simple .r-select-selection-multiple-item {
         }
     }
 }
-html .r-select--simple .r-select-selection-multiple-item-remove {
+html .r-select--themes-simple .r-select-selection-multiple-item-remove {
     display: none;
     position: absolute;
     right:0;

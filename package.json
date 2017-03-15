@@ -22,6 +22,7 @@
     "rc-animate": "^2.3.1",
     "react": "0.14.8",
     "react-dom": "0.14.8",
+    "util.react": "1.1.0",
     "zindex.js": "^0.1.0"
   },
   "scripts": {

@@ -72,6 +72,26 @@ var App = React.createClass({
                      <Option value={0} >0</Option>
                      <Option value={"0"} >"0"</Option>
                  </Select>
+                 <hr />
+                 <Select
+                     themes="min"
+                     value={self.state.value}
+                     placeholder="请选择一项"
+                     onChange={function (value) {
+                         self.setState({
+                             value: value
+                         })
+                     }}
+                 >
+                     <Option value="">请选择</Option>
+                     <Option value="a" >nimo</Option>
+                     <Option value="g" >tim</Option>
+                     <Option value="h" >hans</Option>
+                     <Option value="i" >orly</Option>
+                     <Option value="j" >tim</Option>
+                     <Option value="k" >etude</Option>
+
+                 </Select>
              </div>
         )
     }
