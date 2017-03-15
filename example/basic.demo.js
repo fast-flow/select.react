@@ -1,11 +1,41 @@
 var React = require('react')
 var Select = require('select.react').default
 var Option = require('select.react').Option
+var Loading = require('loading.react').default
 var App = React.createClass({
     getInitialState: function () {
         return {
             value: "a",
-            multipleValue: ["b", "c", "d"]
+            multipleValue: ["b", "c", "d"],
+            loadingFetch: false,
+            lodaingElement: false,
+            page: 1,
+            data: [
+                {
+                    value: "a",
+                    text: "nimo"
+                },
+                {
+                    value: "g",
+                    text: "tim"
+                },
+                {
+                    value: "h",
+                    text: "hans"
+                },
+                {
+                    value: "i",
+                    text: "orly"
+                },
+                {
+                    value: "j",
+                    text: "tim"
+                },
+                {
+                    value: "k",
+                    text: "etude"
+                }
+            ]
         }
     },
     render: function () {
@@ -74,23 +104,71 @@ var App = React.createClass({
                  </Select>
                  <hr />
                  <Select
-                     themes="min"
+                     themes="simple min"
                      value={self.state.value}
                      placeholder="请选择一项"
+                     onScrollBottom={function () {
+                         if (self.state.loadingFetch) {
+                             return
+                         }
+                         self.setState({
+                             loadingFetch: true,
+                             lodaingElement: true
+                         })
+                         // mock ajax
+                         console.log('fetch:' + self.state.page)
+                         setTimeout(function () {
+                             self.setState({
+                                 lodaingElement: false
+                             }, function () {
+                                 setTimeout(function () {
+                                     self.setState({
+                                         loadingFetch: false
+                                     })
+                                 }, 10)
+                             })
+                             if (self.state.data.length < 10) {
+                                 self.setState({
+                                     data: self.state.data.concat([
+                                         {
+                                             value: new Date().getTime(),
+                                             text: Math.random() * 1000
+                                         },
+                                         {
+                                             value: new Date().getTime(),
+                                             text: Math.random() * 1000
+                                         },
+                                         {
+                                             value: new Date().getTime(),
+                                             text: Math.random() * 1000
+                                         }
+                                     ])
+                                 })
+                                 self.setState({
+                                    page: self.state.page + 1
+                                 })
+                             }
+                         }, 400)
+                     }}
                      onChange={function (value) {
                          self.setState({
                              value: value
                          })
                      }}
                  >
-                     <Option value="">请选择</Option>
-                     <Option value="a" >nimo</Option>
-                     <Option value="g" >tim</Option>
-                     <Option value="h" >hans</Option>
-                     <Option value="i" >orly</Option>
-                     <Option value="j" >tim</Option>
-                     <Option value="k" >etude</Option>
-
+                     {
+                         self.state.data.map(function (item, key) {
+                             return (
+                                 <Option key={key} value={item.value} >{item.text}</Option>
+                             )
+                         })
+                     }
+                     {
+                         self.state.lodaingElement?
+                         (
+                             <Option value="" disabled className="r-select-menu-list-item--loading"  ><Loading>{"&nbsp;"}</Loading></Option>
+                         ):null
+                     }
                  </Select>
              </div>
         )

@@ -35,6 +35,15 @@ html .r-select-menu-list-item--disabled.titleOption:hover {
     background-color: white;
     color:#333;
 }
+
+html .r-select-menu--themes-simple.r-select-menu--themes-min .r-select-menu-body {
+    max-height: 100px;
+}
+/* free */
+html .r-select-menu-list-item--loading.r-select-menu-list-item--disabled,
+html .r-select-menu-list-item--loading.r-select-menu-list-item--disabled:hover {
+    background-color: transparent;
+}
 ````
 
 <!--MR-R {
