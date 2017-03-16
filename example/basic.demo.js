@@ -10,7 +10,8 @@ var App = React.createClass({
             loadingFetch: false,
             lodaingElement: false,
             page: 1,
-            data: [
+            scrollValue: 'g',
+            scrollData: [
                 {
                     value: "a",
                     text: "nimo"
@@ -105,7 +106,7 @@ var App = React.createClass({
                  <hr />
                  <Select
                      themes="simple min"
-                     value={self.state.value}
+                     value={self.state.scrollValue}
                      placeholder="请选择一项"
                      onScrollBottom={function () {
                          if (self.state.loadingFetch) {
@@ -127,19 +128,19 @@ var App = React.createClass({
                                      })
                                  }, 10)
                              })
-                             if (self.state.data.length < 10) {
+                             if (self.state.scrollData.length < 10) {
                                  self.setState({
-                                     data: self.state.data.concat([
+                                     scrollData: self.state.scrollData.concat([
                                          {
-                                             value: new Date().getTime(),
+                                             value: new Date().getTime() + Math.random() * 1000,
                                              text: Math.random() * 1000
                                          },
                                          {
-                                             value: new Date().getTime(),
+                                             value: new Date().getTime() + Math.random() * 1000,
                                              text: Math.random() * 1000
                                          },
                                          {
-                                             value: new Date().getTime(),
+                                             value: new Date().getTime() + Math.random() * 1000,
                                              text: Math.random() * 1000
                                          }
                                      ])
@@ -152,12 +153,12 @@ var App = React.createClass({
                      }}
                      onChange={function (value) {
                          self.setState({
-                             value: value
+                             scrollValue: value
                          })
                      }}
                  >
                      {
-                         self.state.data.map(function (item, key) {
+                         self.state.scrollData.map(function (item, key) {
                              return (
                                  <Option key={key} value={item.value} >{item.text}</Option>
                              )
@@ -166,7 +167,7 @@ var App = React.createClass({
                      {
                          self.state.lodaingElement?
                          (
-                             <Option value="" disabled className="r-select-menu-list-item--loading"  ><Loading>{"&nbsp;"}</Loading></Option>
+                             <Option value={new Date().getTime() + Math.random()} disabled className="r-select-menu-list-item--loading"  ><Loading>{"&nbsp;"}</Loading></Option>
                          ):null
                      }
                  </Select>
