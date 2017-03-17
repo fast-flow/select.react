@@ -37,7 +37,7 @@
     "npm": "fis3 release npm -c -d ./output -r ./ -f config/fis-conf.js",
     "test-ci": "./node_modules/jest/bin/jest.js",
     "test": "./node_modules/jest/bin/jest.js --watch",
-    "release": "npm run test-ci && npm run gh && npm run gh-push && npm run npm && cd output && npm publish"
+    "release": "npm run gh && npm run gh-push && npm run npm && cd output && npm publish"
   },
   "jest": {
     "moduleNameMapper": {
