@@ -77,7 +77,7 @@
     <div class="r-select-selection">
         <div class="r-select-selection-placeholder">请选择</div>
         <div class="r-select-selection-multiple">
-            <span class="r-select-selection-multiple-item"><span class="r-select-selection-multiple-item-text" >nimo</span><span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item"><span class="r-select-selection-multiple-item-text" >nico</span><span class="r-select-selection-multiple-item-remove">
+            <span class="r-select-selection-multiple-item"><span class="r-select-selection-multiple-item-text" >nimo</span><span class="r-select-selection-multiple-item-remove"></span></span><span class="r-select-selection-multiple-item"><span class="r-select-selection-multiple-item-text" >nico</span><span class="r-select-selection-multiple-item-remove"></span></span>
         </div>
         <span class="r-select-selection-clear" ></span>
         <span class="r-select-selection-switch"></span>
