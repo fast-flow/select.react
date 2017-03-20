@@ -44,6 +44,11 @@ html .r-select-menu-list-item--loading.r-select-menu-list-item--disabled,
 html .r-select-menu-list-item--loading.r-select-menu-list-item--disabled:hover {
     background-color: transparent;
 }
+html body .r-select-menu--themes-simple .option---loading,
+html body .r-select-menu--themes-simple .option---loading:hover {
+    background-color: white;
+    color:#34495e;
+}
 ````
 
 <!--MR-R {
