@@ -36,7 +36,8 @@ var App = React.createClass({
                     value: "k",
                     text: "etude"
                 }
-            ]
+            ],
+            customOpen: false
         }
     },
     render: function () {
@@ -62,6 +63,11 @@ var App = React.createClass({
                          <div>
                              <span>选择多项</span>
                              <span className="r-select-menu-header-close" data-r-select-close="true" ></span>
+                         </div>
+                     )}
+                     footer={(
+                         <div>
+                             <span data-r-select-close="true" style={{cursor: "pointer"}} >确定</span>
                          </div>
                      )}
                   >
@@ -170,6 +176,23 @@ var App = React.createClass({
                              <Option value={new Date().getTime() + Math.random()} disabled className="r-select-menu-list-item--loading"  ><Loading>{"&nbsp;"}</Loading></Option>
                          ):null
                      }
+                 </Select>
+                 <hr />
+                 <button type="button" id="clickMeWillNotClose" >click me will not close</button>
+                 {
+                     self.state.customOpen?'open':'close'
+                 }
+                 <Select open={self.state.customOpen} onSwitch={function (open, event) {
+                         if (event.target.getAttribute('id') !== 'clickMeWillNotClose') {
+                             self.setState({
+                                 customOpen: open
+                             })
+                         }
+                         else {
+                             console.log('click #clickMeWillNotClose')
+                         }
+                     }}  >
+                     <Option value="">customOpen</Option>
                  </Select>
              </div>
         )
