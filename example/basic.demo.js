@@ -53,6 +53,18 @@ var App = React.createClass({
                      empty={(<em>无数据</em>)}
                       >
                  </Select>
+                 <Select
+                     menuStyle={{width: 100}}
+                     arrows={(
+                         <div className="r-select-menu-arrows" >{/* r-select-menu-arrows--center */}</div>
+                     )}
+                     empty={(<em>无数据</em>)}
+                      >
+                      {
+                          [null]
+                      }
+                      null
+                 </Select>
                  <hr />
                  <Select  placeholder="请选择" value={self.state.multipleValue} multiple onChange={function (value) {
                          self.setState({
